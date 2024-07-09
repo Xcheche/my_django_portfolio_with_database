@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django .http import HttpResponse
 from django.contrib.staticfiles.storage import staticfiles_storage
 
-from resume.models import About, HomeInfo
+from resume.models import About, HomeInfo, Projects
 
 
 # Create your views here.
@@ -20,21 +20,22 @@ def about(request):
 
 
 def projects(request):
-    projects_show = [
-        {
-            "title": "Ecommerce",
-            "path": "images/projects_img/ecom.jpeg",
-        },
-        {
-            "title": "Salon",
-            "path": "images/projects_img/hairsalon.jpeg",
-        },
-        {
-            "title": "Portfolio",
-            "path": "images/projects_img/portfolio_project.jpeg",
-        },
-    ]
-    return render(request, "projects.html", {"projects_show": projects_show})
+    project_show = Projects.objects.all()
+    # projects_show = [
+    #     {
+    #         "title": "Ecommerce",
+    #         "path": "images/projects_img/ecom.jpeg",
+    #     },
+    #     {
+    #         "title": "Salon",
+    #         "path": "images/projects_img/hairsalon.jpeg",
+    #     },
+    #     {
+    #         "title": "Portfolio",
+    #         "path": "images/projects_img/portfolio_project.jpeg",
+    #     },
+    # ]
+    return render(request, "projects.html", {"project_show": project_show})
 
 
 def experience(request):
