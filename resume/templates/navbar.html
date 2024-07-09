@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5 m-2" href="/">Cheche</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="{% url 'resume:home' %}"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:projects' %}">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:experience' %}"
+            >Experience</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:certificates' %}"
+            >Certificates</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:contact' %}">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'resume:resume' %}">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

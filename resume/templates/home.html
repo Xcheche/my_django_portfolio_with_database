@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% load static %} {% block content1 %} <br />
+
+<div class="row my-5">
+  <div class="col-12 d-flex justify-content-center align-items-center">
+    <div class="circular-image-container">
+      <img
+        class="circular-image"
+        src="{% static 'images/cheche.jpeg' %}"
+        alt="image"
+      />
+    </div>
+  </div>
+</div>
+{% if info %}
+{% for item in info %}
+<div class="col-12 mt-3 text-center">
+  <h4 class="title">{{ item.title|safe }}</h4>
+  <div class="name">
+    <h1>{{ item.name|safe }}</h1>
+    <h3>{{ item.position|safe }}</h3>
+    {% endfor %}
+    {% endif %}
+  </div>
+  <div
+    class="col-12 text-center d-flex justify-content-center align-items-center mt-3"
+  >
+    <div
+      class="col-12 text-center d-flex justify-content-center align-items-center mt-3"
+    >
+      <a href="https://linkedin.com">
+        <img src="{% static 'images/linkedin.jpeg' %}" alt="linkedin"width"50"
+        height="50" class="social_links ms-3" >
+      </a>
+      <a href="https://github.com">
+        <img src="{% static 'images/github.png' %}" alt="github"width"45"
+        height="50" class="social_links ms-3" >
+      </a>
+      <a href="https://discord.com">
+        <img src="{% static 'images/discord.jpeg' %}" alt="discord"width"50"
+        height="50" class="social_links ms-3" >
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content1 %}

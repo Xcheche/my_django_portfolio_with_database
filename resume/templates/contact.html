@@ -1,0 +1,85 @@
+{% extends 'base.html' %} <br />
+{% load static %} <br />
+{% block content1 %}
+<div class="row my-2">
+  <div class="col-4 text-center my-5 text-light">
+    <h1 class="mt-5">Stay Connected</h1>
+    <h3 class="mt-5">checheomenife@gmail.com</h3>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <a href="https://linkedin.com">
+        <img src="{% static 'images/linkedin.jpeg' %}" alt="linkedin"width"50"
+        height="50" class="social_links ms-3" >
+      </a>
+      <a href="https://github.com">
+        <img src="{% static 'images/github.png' %}" alt="github"width"45"
+        height="50" class="social_links ms-3" >
+      </a>
+      <a href="https://discord.com">
+        <img src="{% static 'images/discord.png' %}" alt="discord"width"45"
+        height="50" class="social_links ms-3" >
+      </a>
+    </div>
+  </div>
+  <div class="col-5 offset-1 mt-3">
+    <div class="container form-container">
+      <form
+        action="https://formspree.io/f/mknlgndv"
+        method="POST"
+        onsubmit="return submitForm(event)"
+      >
+        {% csrf_token %}
+        <div class="form-group m-3">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            class="form-control"
+            id="name"
+            aria-describedby="namehelp"
+            required
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group m-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailhelp"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group m-3">
+          <label for="tel">Tel</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="tel"
+            aria-describedby="telhelp"
+            required
+            placeholder="Enter telephone_number"
+          />
+        </div>
+        <div class="form-group m-3">
+          <label for="msg">Message</label><br />
+          <textarea
+            name="msg"
+            required
+            type="message"
+            id=""
+            rows="2"
+            id="msg"
+            placeholder="Enter message"
+          ></textarea>
+        </div>
+
+        <button type="submit" placeholder class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+      <div id="success-message" style="display: none"></div>
+    </div>
+  </div>
+</div>
+
+{% endblock content1 %}

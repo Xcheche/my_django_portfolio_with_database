@@ -1,0 +1,23 @@
+{% extends 'base.html' %} <br />
+{% load static %} <br />
+{% block content1 %}
+<div class="row my-2">
+  {% for project in projects_show %}
+  <div class="col-4">
+    <h4 style="color: #fff">{{ project.title }}</h4>
+    <img
+      src="{% static project.path %}"
+      width="500"
+      height="800"
+      class="img-fluid"
+      alt="projects"
+    />
+    <button class="btn btn-outline-light mt-3">
+      <a href="https:\\www.google.com" style="text-decoration: none"
+        >View Project</a
+      >
+    </button>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content1 %}
