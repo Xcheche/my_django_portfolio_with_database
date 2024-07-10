@@ -10,4 +10,5 @@ urlpatterns = [
     path("certificates/", views.certificates, name="certificates"),
     path("contact/", views.contact, name="contact"),
     path("resume/", views.resume, name="resume"),
+    path("aboutproject<int:project_id>/", views.aboutproject, name="aboutproject"),
 ]

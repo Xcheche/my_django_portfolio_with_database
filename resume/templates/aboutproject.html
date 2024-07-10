@@ -1,0 +1,23 @@
+{% if project %}
+
+<div>
+    <h1>{{ project.title }}</h1>
+     <img
+      src="{{ project.project_photo.url }}"
+      width="500"
+      height="500"
+      class="img-fluid"
+      alt="projects"
+    />
+    <h4>{{ project.decription|safe }}</h4>
+    <a href="{% url 'resume:home' %}">Back</a>
+</div>
+{% endif %}
+
+<style>
+    div {
+      
+        text-align: center;
+    }
+    
+</style>

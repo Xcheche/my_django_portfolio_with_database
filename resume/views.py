@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django .http import HttpResponse
 from django.contrib.staticfiles.storage import staticfiles_storage
 
@@ -36,6 +36,11 @@ def projects(request):
     #     },
     # ]
     return render(request, "projects.html", {"project_show": project_show})
+
+def aboutproject(request, project_id):
+    project = get_object_or_404(Projects, id=project_id)
+    print(project.title, project.decription) 
+    return render(request, "aboutproject.html", {"project": project})
 
 
 def experience(request):
