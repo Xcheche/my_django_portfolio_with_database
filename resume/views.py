@@ -21,6 +21,7 @@ def about(request):
 
 def projects(request):
     project_show = Projects.objects.all()
+    
     return render(request, "projects.html", {"project_show": project_show})
 
 
