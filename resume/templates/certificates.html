@@ -1,10 +1,21 @@
-{% extends 'base.html' %} {% block content1 %} <br />
-<div class="row">
-  <div class="jumbotron jumbotron-fluid mt-2">
-    <h1 class="display4">CCNA</h1>
-  </div>
-  <div class="jumbotron jumbotron-fluid mt-2">
-    <h1 class="display4">Python</h1>
-  </div>
+{% extends 'base.html' %}
+
+{% block content1 %}
+<br />
+
+<div class="container mt-5">
+    <div class="row">
+        {% for certificate in show_cert %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ certificate.title }}</h5>
+                    <p class="card-text">Certificate ID: {{ certificate.certificate_id }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
+
 {% endblock content1 %}

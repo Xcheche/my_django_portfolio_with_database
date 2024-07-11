@@ -6,28 +6,36 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('resume', '0002_homeinfo'),
+        ("resume", "0002_homeinfo"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Projects',
+            name="Projects",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('decription', models.TextField(blank=True)),
-                ('project_photo', models.ImageField(upload_to='images/projects_img')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=100)),
+                ("decription", models.TextField(blank=True)),
+                ("project_photo", models.ImageField(upload_to="images/projects_img")),
             ],
             options={
-                'verbose_name_plural': 'Projects',
+                "verbose_name_plural": "Projects",
             },
         ),
         migrations.AlterModelOptions(
-            name='about',
-            options={'verbose_name_plural': 'About'},
+            name="about",
+            options={"verbose_name_plural": "About"},
         ),
         migrations.AlterModelOptions(
-            name='homeinfo',
-            options={'verbose_name_plural': 'Home Info'},
+            name="homeinfo",
+            options={"verbose_name_plural": "Home Info"},
         ),
     ]
