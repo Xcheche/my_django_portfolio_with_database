@@ -11,7 +11,7 @@
     </div>
   </div>
 </div>
-{% if info %}
+
 {% for item in info %}
 <div class="col-12 mt-3 text-center">
   <h4 class="title">{{ item.title|safe }}</h4>
@@ -19,7 +19,7 @@
     <h1>{{ item.name|safe }}</h1>
     <h3>{{ item.position|safe }}</h3>
     {% endfor %}
-    {% endif %}
+    
   </div>
   <div
     class="col-12 text-center d-flex justify-content-center align-items-center mt-3"
