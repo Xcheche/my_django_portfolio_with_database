@@ -17,7 +17,6 @@ class HomeInfo(models.Model):
 
 class About(models.Model):
     about = models.TextField(blank=True)
-
     class Meta:
         verbose_name_plural = "About"
 
@@ -49,6 +48,7 @@ class Experience(models.Model):
     class Meta:
         verbose_name_plural = "Experience"
 
+
 class Certificates(models.Model):
     title = models.CharField(max_length=100)
     certificate_id = models.CharField(max_length=25, blank=True)
@@ -58,4 +58,3 @@ class Certificates(models.Model):
 
     class Meta:
         verbose_name_plural = "Certificates"
-        
