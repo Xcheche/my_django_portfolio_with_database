@@ -1,0 +1,12 @@
+/* Change the background color */
+.module h2, .module caption, .breadcrumbs, .grp-title, .grp-changelist-title {
+    background-color: black;
+    color: white;
+}
+
+/* Change the header background color */
+#header {
+    background-color: black;
+    color: white;
+}
+

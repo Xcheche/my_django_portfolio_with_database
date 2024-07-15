@@ -92,3 +92,8 @@ experience */
     border-radius: 10px;
     border: 2px solid white;
 }
+footer a{
+    text-decoration: none;
+}
+
+
