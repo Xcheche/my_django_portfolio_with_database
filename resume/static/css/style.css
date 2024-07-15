@@ -96,4 +96,19 @@ footer a{
     text-decoration: none;
 }
 
-
+/* css for pagination */
+   
+    .page-link {
+        color: #fff;
+        background-color: #000;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 0 5px;
+       
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+    }
+  
