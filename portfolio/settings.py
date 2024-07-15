@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "resume",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-EXTERNAL_APPS = ["resume"]
-INSTALLED_APPS += EXTERNAL_APPS
+# EXTERNAL_APPS = ["resume"]
+# INSTALLED_APPS += EXTERNAL_APPS
 
 
 MIDDLEWARE = [
