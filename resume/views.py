@@ -11,7 +11,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def home(request):
     info = HomeInfo.objects.all()
-    return render(request, "home.html", {"info": info})
+    return render(request, "home.html", {"info": info, 'is_homepage': True})
 
 
 def about(request):
