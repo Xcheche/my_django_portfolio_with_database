@@ -15,14 +15,14 @@
         height="50" class="social_links ms-3" >
       </a>
       <a href="https://discord.com">
-        <img src="{% static 'images/discord.png' %}" alt="discord"width"45"
+        <img src="{% static 'images/discord.jpeg' %}" alt="discord"width"45"
         height="50" class="social_links ms-3" >
       </a>
     </div>
   </div>
   <!--  <div class="col-5 offset-1 mt-3 pull-right">  -->
   <div class="col-md-6 offset-1 mt-3 pull-right">
-    <div class="container form-container ">
+    <div class="container form-container">
       <form
         action="https://formspree.io/f/mknlgndv"
         method="POST"
@@ -50,6 +50,7 @@
             placeholder="Enter email"
           />
         </div>
+
         <div class="form-group m-3">
           <label for="tel">Tel</label>
           <input
@@ -58,9 +59,15 @@
             id="tel"
             aria-describedby="telhelp"
             required
-            placeholder="Enter telephone_number"
+            placeholder="Enter telephone number"
+            pattern="[0-9]{10,15}"
+            title="Please enter a valid phone number (10 to 15 digits)"
           />
+          <small id="telhelp" class="form-text text-muted">
+            Enter a valid phone number.
+          </small>
         </div>
+
         <div class="form-group m-3">
           <label for="msg">Message</label><br />
           <textarea

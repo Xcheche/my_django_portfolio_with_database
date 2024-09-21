@@ -17,6 +17,7 @@ class HomeInfo(models.Model):
 
 class About(models.Model):
     about = models.TextField(blank=True)
+
     class Meta:
         verbose_name_plural = "About"
 

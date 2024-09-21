@@ -1,200 +1,254 @@
-{% extends 'base.html' %}
-{% load static %} <br />
+{% extends 'base.html' %} {% load static %} <br />
 {% block content1 %}
 <div class="row my-5">
   <div class="col-4 d-flex justify-content-center align-items-center">
     <div class="circular-image-container">
       <img
         class="circular-image"
-        src="{% static 'images/cheche.jpeg' %}" 
+        src="{% static 'images/cheche.jpeg' %}"
         alt="image"
       />
     </div>
   </div>
   <!-- About -->
-  {% if items %}
-    {% for item in items %}
-      <div class="col-7 text-left text-light">
-        {{ item.about|safe }}
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>No About</p>
+  {% if items %} {% for item in items %}
+  <div class="col-7 text-left text-light">{{ item.about|safe }}</div>
+  {% endfor %} {% else %}
+  <p>No About</p>
   {% endif %}
 
   <!-- Tech Stack -->
-<div class="container ">
-<div class="col-md-6 offset-md-3">
-    <h2 class="text-center" style="color: #4fffb0"> Tech Stack</h2>
-    <div class="col-12 mt-4">
-      <div class="tech-bar text-light">
-        <span>HTML5</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 90%; background-color: #4fffb0;">
-            90%
-          </div>
-        </div>
-      </div>
+  <style>
+    .progress-bar {
+      height: 20px; /* Adjust the height here */
+    }
+  </style>
 
-      <div class="tech-bar text-light">
-        <span>CSS3</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%; background-color: #06b6d4;">
-            85%
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center" style="color: #4fffb0">Tech Stack</h2>
+        <div class="col-12 mt-4">
+          <div class="tech-bar text-light">
+            <span>Html5</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 90%; background-color: #4fffb0"
+              >
+                90%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>JavaScript</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 75%; background-color: #ffca28;">
-            60%
+          <div class="tech-bar text-light">
+            <span>Fastapi</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 90%; background-color: #4fffb0"
+              >
+                90%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Python</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 80%; background-color: #3572a5;">
-            80%
+          <div class="tech-bar text-light">
+            <span>CSS3</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 85%; background-color: #06b6d4"
+              >
+                85%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Dart</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 70%; background-color: #0175c2;">
-            70%
+          <div class="tech-bar text-light">
+            <span>JavaScript</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 75%; background-color: #ffca28"
+              >
+                60%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Linux</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 60%; background-color: #333333;">
-            60%
+          <div class="tech-bar text-light">
+            <span>Python</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 80%; background-color: #3572a5"
+              >
+                80%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Django</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 80%; background-color: #092e20;">
-            90%
+          <div class="tech-bar text-light">
+            <span>Dart</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 70%; background-color: #0175c2"
+              >
+                70%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Bootstrap</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 85%; background-color: #563d7c;">
-            85%
+          <div class="tech-bar text-light">
+            <span>Linux</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 60%; background-color: #333333"
+              >
+                60%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>DRF</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 70%; background-color: #4e8e4a;">
-            70%
+          <div class="tech-bar text-light">
+            <span>Django</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 90%; background-color: #092e20"
+              >
+                90%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Networking</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 60%; background-color: #007bff;">
-            60%
+          <div class="tech-bar text-light">
+            <span>Bootstrap</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 85%; background-color: #563d7c"
+              >
+                85%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Markdown</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 65%; background-color: #4a4a4a;">
-            65%
+          <div class="tech-bar text-light">
+            <span>DRF</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 70%; background-color: #4e8e4a"
+              >
+                70%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>WordPress</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 55%; background-color: #21759b;">
-            55%
+          <div class="tech-bar text-light">
+            <span>Networking</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 60%; background-color: #007bff"
+              >
+                60%
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="tech-bar text-light">
-        <span>Docker</span>
-        <div class="progress">
-          <div class="progress-bar" style="width: 70%; background-color: #2496ed;">
-            70%
+          <div class="tech-bar text-light">
+            <span>Markdown</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 65%; background-color: #4a4a4a"
+              >
+                65%
+              </div>
+            </div>
           </div>
+
+          <div class="tech-bar text-light">
+            <span>WordPress</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 55%; background-color: #21759b"
+              >
+                55%
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="tech-bar text-light">
+            <span>Docker</span>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                style="width: 30%; background-color: #2496ed"
+              >
+                70%
+              </div>
+            </div>
+          </div>-->
         </div>
       </div>
     </div>
   </div>
+
+  {% endblock content1 %}
+
+  <style>
+    .tech-bar {
+      margin-bottom: 1rem;
+    }
+
+    .progress {
+      height: 25px;
+      background-color: #f1f1f1;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 50%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .circular-image {
+      border-radius: 50%;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .circular-image-container {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #06b6d4, #4fffb0);
+      padding: 5px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .container {
+      width: 40%;
+    }
+  </style>
 </div>
-</div>
-{% endblock content1 %}
-
-<style>
-  .tech-bar {
-    margin-bottom: 1rem;
-  }
-
-  .progress {
-    
-    height: 25px;
-    background-color: #f1f1f1;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .progress-bar {
-    height: 50%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-  }
-
-  .circular-image {
-    border-radius: 50%;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .circular-image-container {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, #06b6d4, #4fffb0);
-    padding: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .container {
-    width: 40%;
-  }
-</style>

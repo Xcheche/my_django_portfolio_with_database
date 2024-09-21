@@ -6,7 +6,10 @@ function submitForm(event) {
 
         // Show the success message
         var successMessage = document.getElementById("success-message");
-        successMessage.innerText = "Sent successfully. I normally respond within 48 hours. Also, feel free to WhatsApp me.";
+successMessage.innerText = "Message Sent! 🎉\n" +
+  "Thank you for reaching out. I typically respond within 48 hours.\n" +
+  "In the meantime, if you need an immediate response or have any urgent questions, feel free to drop me a message on WhatsApp.";
+
         successMessage.style.display = "block";
 
         // Set a timeout to hide the success message after 5 seconds
